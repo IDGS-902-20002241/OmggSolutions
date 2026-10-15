@@ -61,7 +61,7 @@ jobs:
         run: |
           DESTINO="/home/octam/homelab/web-publica/react"
           mkdir -p "$DESTINO"
-          cp -a "$RUNNER_TEMP/react-dist/." "$DESTINO/"
+          cp -r "$RUNNER_TEMP/react-dist/." "$DESTINO/"
           echo "React publicado correctamente"
 
       - name: Comprobar pagina
