@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-          cache: npm
+          cache: 'npm'
 
       - name: Instalar dependencias
         run: npm ci
@@ -33,3 +33,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: react-dist
+          path: dist/
+          if-no-files-found: error
